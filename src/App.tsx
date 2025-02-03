@@ -1,11 +1,8 @@
-import ListGroup from './components/ListGroup';
-import './App.css';
+import Like from './components/Like';
 function App() {
-  let items = ['New York', 'Los Angles', 'San Francisco'];
-
   return (
     <div>
-      <ListGroup items={items} heading='Miami' onSelectItem={() => {}} />
+      <Like onClick={() => console.log('clicked')} />
     </div>
   );
 }
