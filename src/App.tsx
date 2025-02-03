@@ -7,13 +7,13 @@ function App() {
   });
 
   const handleClick = () => {
-    const newDrink = {
-      // title: drink.title,
-      ...drink,
-      price: 6,
-    };
+    // const newDrink = {
+    //   // title: drink.title,
+    //   ...drink,
+    //   price: 6,
+    // };
 
-    setDrink(newDrink);
+    setDrink({ ...drink, price: 6 });
   };
 
   return (
