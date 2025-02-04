@@ -1,38 +1,21 @@
-import { produce } from 'immer';
-import { useState } from 'react';
-function App() {
-  const [cart, setCart] = useState({
-    discount: 0.1,
-    items: [
-      { id: 1, title: 'Product 1', quantity: 1 },
-      { id: 2, title: 'Product 2', quantity: 1 },
-    ],
-  });
+import ExpandableText from './components/ExpandableText';
 
-  const handleClick = () => {
-    // setCart({
-    //   ...cart,
-    //   items: cart.items.map((item) =>
-    //     item.id === 1 ? { ...item, quantity: item.quantity + 1 } : item
-    //   ),
-    // });
-    setCart(
-      produce((draft) => {
-        const item = draft.items.find((item) => item.id === 1);
-        if (item) {
-          item.quantity += 1;
-        }
-      })
-    );
-  };
+function App() {
   return (
     <div>
-      {cart.items.map((item) => (
-        <p key={item.id}>
-          {item.title} - Quantity:{item.quantity}
-        </p>
-      ))}
-      <button onClick={handleClick}>Change Quantity</button>
+      <ExpandableText>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum a,
+        impedit, animi veritatis expedita ratione unde fuga quidem modi id iusto
+        ut, quas autem error dolorem! Delectus accusamus maxime id molestias eos
+        expedita ullam maiores facilis, itaque ipsum a at excepturi temporibus,
+        tenetur quibusdam. Error illum asperiores possimus sit ipsa. Dolorum
+        quibusdam molestiae magnam ipsum natus eum culpa ducimus asperiores,
+        corrupti maiores quia voluptate obcaecati excepturi debitis odit.
+        Quisquam tempore ex fugit impedit. Sapiente omnis veniam nisi delectus.
+        Distinctio, rem eum fuga eos adipisci quisquam odio, facere maiores nam
+        nobis debitis voluptate, et sunt ipsa earum enim aliquam repellat
+        consequuntur?
+      </ExpandableText>
     </div>
   );
 }
