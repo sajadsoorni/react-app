@@ -1,6 +1,7 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
-// import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/css/bootstrap.css';
+import './index.css';
 // import FirstMessageApp from './FirstMessageApp.tsx';
 // import ListGroupApp from './ListGroupApp.tsx';
 // import ALertApp from './ALertApp.tsx';
