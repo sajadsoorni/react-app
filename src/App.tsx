@@ -1,15 +1,11 @@
-import React, { useState } from 'react';
-
 function App() {
-  const [game, setGame] = useState({
-    id: 1,
-    player: {
-      name: 'John',
-    },
+  const [pizza, setPizaa] = useState({
+    name: 'Spicy Pepperoni',
+    toppings: ['Mushroom'],
   });
 
   const handleClick = () => {
-    setGame({ ...game, player: { ...game.player, name: 'Bob' } });
+    setPizaa({ ...pizza, toppings: [...pizza.toppings, 'Cheese'] });
   };
   return (
     <div>
