@@ -1,21 +1,13 @@
-import { useEffect, useRef } from 'react';
+import { useEffect } from 'react';
+import ProductList from './components/ProductList';
 
 function App() {
-  const ref = useRef<HTMLInputElement>(null);
-
   // afterRender
-  useEffect(() => {
-    // Side effect
-    if (ref.current) ref.current.focus();
-  });
-
-  useEffect(() => {
-    document.title = 'My App';
-  });
+  useEffect(() => {});
 
   return (
     <div>
-      <input ref={ref} type='text' className='form-control' />
+      <ProductList />
     </div>
   );
 }
